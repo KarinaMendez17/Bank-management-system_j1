@@ -17,13 +17,79 @@
             },
             "debit_accounts": {
                 "savings_account": 1234,
-                "checking_account": 59366
+                "checking_account": 87061,
+                "balance": {
+                    "savings_account": 10259.0,
+                    "checking_account": 26000.5
+                },
+                "loans": {
+                    "credit_card": {
+                        "card_number": null,
+                        "balance": 0,
+                        "debt": 0
+                    },
+                    "any_ploan": {
+                        "ploan_number": null,
+                        "balance": 0,
+                        "debt": 0
+                    },
+                    "mortgage": {
+                        "mortgage_number": null,
+                        "balance": 0,
+                        "debt": 0
+                    },
+                    "vehicle_loan": {
+                        "vloan_number": null,
+                        "balance": 0,
+                        "debt": 0
+                    }
+                }
+            }
+        },
+        "1234567891": {
+            "name": "Aggressive Menace",
+            "age": 109,
+            "gender": "M",
+            "email": "AM@gmail.com",
+            "contact_info": {
+                "mobile": 7445859575,
+                "landline": null
+            },
+            "location": {
+                "country": "Usa",
+                "department": "New york",
+                "city": "Underground facility",
+                "address": "Ihnmaims 109"
+            },
+            "debit_accounts": {
+                "savings_account": 3014,
+                "checking_account": 23750,
+                "balance": {
+                    "savings_account": 11109.0,
+                    "checking_account": 109000.0
+                }
             },
             "loans": {
-                "credit_card": null,
-                "any_ploan": null,
-                "mortgage": null,
-                "vehicle_loan": null
+                "credit_card": {
+                    "card_number": null,
+                    "balance": 0,
+                    "debt": 0
+                },
+                "any_ploan": {
+                    "ploan_number": null,
+                    "balance": 0,
+                    "debt": 0
+                },
+                "mortgage": {
+                    "mortgage_number": null,
+                    "balance": 0,
+                    "debt": 0
+                },
+                "vehicle_loan": {
+                    "vloan_number": null,
+                    "balance": 0,
+                    "debt": 0
+                }
             }
         }
     }

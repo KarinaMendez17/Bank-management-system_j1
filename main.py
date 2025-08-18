@@ -1,7 +1,9 @@
 #Libraries
 import os
 import time
-import modules.debitAccount as cr
+import modules.debitAccount as da
+import modules.creditAccount as ca
+import modules.deposits as dp
 
 def main():
     while True:
@@ -12,11 +14,11 @@ def main():
 
             match option:
                 case 1:
-                    cr.create_account()
+                    da.create_debitAcc()
                 case 2:
-                    pass
+                    dp.deposit()
                 case 3:
-                    pass
+                    ca.create_creditAcc()
                 case 4:
                     pass
                 case 5:
@@ -24,7 +26,8 @@ def main():
                 case 6:
                     pass
                 case 7:
-                    pass
+                    print("Hasta pronto...")
+                    break
                 case _:
                     print("Por favor, ingrese una opción válida...")
                     time.sleep(2)

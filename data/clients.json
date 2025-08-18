@@ -91,6 +91,52 @@
                     "debt": 0
                 }
             }
+        },
+        "1234567892": {
+            "name": "Ted",
+            "age": 25,
+            "gender": "M",
+            "email": "ted@aaaa.com",
+            "contact_info": {
+                "mobile": 7445857485,
+                "landline": 7441548474
+            },
+            "location": {
+                "country": "Mexico",
+                "department": "Guerrero",
+                "city": "Marquelia",
+                "address": "Si 145"
+            },
+            "debit_accounts": {
+                "savings_account": null,
+                "checking_account": null,
+                "balance": {
+                    "savings_account": 0,
+                    "checking_account": 0
+                }
+            },
+            "loans": {
+                "credit_card": {
+                    "card_number": null,
+                    "balance": 0,
+                    "debt": 0
+                },
+                "any_ploan": {
+                    "ploan_number": null,
+                    "balance": 0,
+                    "debt": 0
+                },
+                "mortgage": {
+                    "mortgage_number": null,
+                    "balance": 0,
+                    "debt": 0
+                },
+                "vehicle_loan": {
+                    "vloan_number": null,
+                    "balance": 0,
+                    "debt": 0
+                }
+            }
         }
     }
 }

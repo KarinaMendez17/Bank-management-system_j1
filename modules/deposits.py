@@ -62,8 +62,6 @@ def my_products(client, cc):
 
 #Option 1: Deposit to savings account.
 def deposit_ca(client, cc):
-    while True:
-        try:
             amount = float(input("Monto a depositar en Cuenta de Ahorros: "))
             client["debit_accounts"]["balance"]["savings_account"] += amount
 
@@ -75,12 +73,7 @@ def deposit_ca(client, cc):
                 json.dump(info, am, indent=4)
 
             print(f"Depósito exitoso. Nuevo saldo de Ahorros: {client['debit_accounts']['balance']['savings_account']}")
-            choice = input("¿Desea realizar otra operación? (s/n): ").strip().lower()
-            if choice != "s":
-                break
-        except(ValueError, KeyboardInterrupt) as sixth:
-            print(f"Error: {sixth}, elige una opción válida...")
-            
+                      
 #Option 1: Deposit to checking account.
 def deposit_cc(client, cc):
     amount = float(input("Monto a depositar en Cuenta Corriente: "))

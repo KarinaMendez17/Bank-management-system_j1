@@ -4,7 +4,9 @@ import time
 import modules.debitAccount as da
 import modules.creditAccount as ca
 import modules.deposits as dp
-
+import modules.withdrawal as wd
+import modules.payments as pm
+import modules.deleteAccount as dt
 def main():
     while True:
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -20,11 +22,11 @@ def main():
                 case 3:
                     ca.create_creditAcc()
                 case 4:
-                    pass
+                    wd.withdrawal()
                 case 5:
-                    pass
+                    pm.payments()
                 case 6:
-                    pass
+                    dt.terminate_account()
                 case 7:
                     print("Hasta pronto...")
                     break

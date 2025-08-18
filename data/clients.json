@@ -1,0 +1,30 @@
+{
+    "clients": {
+        "1234567890": {
+            "name": "Oswald Robotnik",
+            "age": 26,
+            "gender": "O",
+            "email": "oswald@gmail.com",
+            "contact_info": {
+                "mobile": 7441568797,
+                "landline": 7444427509
+            },
+            "location": {
+                "country": "Colombia",
+                "department": "Santander",
+                "city": "Bucaramanga",
+                "address": "Calle Falsa 123"
+            },
+            "debit_accounts": {
+                "savings_account": 1234,
+                "checking_account": 59366
+            },
+            "loans": {
+                "credit_card": null,
+                "any_ploan": null,
+                "mortgage": null,
+                "vehicle_loan": null
+            }
+        }
+    }
+}

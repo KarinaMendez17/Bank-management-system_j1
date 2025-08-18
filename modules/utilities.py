@@ -1,8 +1,8 @@
-#To validate numbers.
-def numb_criteria(mensaje, min=None, max=None, lngt=None):
+#Number verification.
+def numb_criteria(txt, min=None, max=None, lngt=None):
     while True:
         try:
-            valor = int(input(mensaje))
+            valor = int(input(txt))
 
             if min is not None and valor < min:
                 print(f"El valor debe ser mayor o igual a {min}.")
@@ -15,5 +15,31 @@ def numb_criteria(mensaje, min=None, max=None, lngt=None):
                 continue
 
             return valor
-        except ValueError:
-            print("Ingrese un número válido.")
+        except (ValueError, KeyboardInterrupt):
+            print("Ingrese un número válido...")
+
+#Email verification.
+def email_criteria(txt):
+    while True:
+        try:
+            email = input(txt).strip()
+            if "@" not in email:
+                print("Email inválido: falta '@'")
+                continue
+            if not any(email.endswith(dom) for dom in [".com", ".es", ".co", ".net"]):
+                print("Email inválido: debe terminar en un dominio válido (.com, .es, .co, .net)")
+                continue
+            return email
+        except (ValueError, KeyboardInterrupt):
+            print("Ingrese un email válido...")
+
+#Personalized greetings.
+def greetings(gender):
+
+    if gender == "M":
+        p_greet = "bienvenido"
+    elif gender == "F":
+        p_greet = "bienvenida"
+    else:
+        p_greet = "bienvenidx"
+    return p_greet

@@ -1,7 +1,7 @@
 #Libraries
 import os
 import time
-import modules.corefiles as cr
+import modules.debitAccount as cr
 
 def main():
     while True:

@@ -56,7 +56,7 @@ def create_ca():
             while savings_account in existing_numbers:
                 savings_account = random.randint(1000, 9999)
 
-#Overwrites the default "Null" value for ths field. 
+#Overwrites the default "Null" value for this field. 
             client["debit_accounts"][new_acc + "_account"] = savings_account
             with open("data/clients.json", "w") as am:
                 json.dump(info, am, indent=4)
@@ -111,29 +111,6 @@ def create_ca():
                     "checking_account": 0
                 },
             },
-#The account starts with zero loans, but the option remains there if the client wants to apply for one in the future.
-            "loans": {
-                "credit_card": {
-                    "card_number": None,
-                    "balance": 0,
-                    "debt": 0
-                },
-                "any_ploan": {
-                    "ploan_number": None,
-                    "balance": 0,
-                    "debt": 0
-                },
-                "mortgage": {
-                    "mortgage_number": None,
-                    "balance": 0,
-                    "debt": 0
-                },
-                "vehicle_loan": {
-                    "vloan_number": None,
-                    "balance": 0,
-                    "debt": 0
-                }
-            }
         }
 
 #Saves everything in the Json file.
@@ -226,29 +203,6 @@ def create_cc():
                     "checking_account": 0
                 },
             },
-#The account starts with zero loans, but the option remains there if the client wants to apply for one in the future.
-            "loans": {
-                "credit_card": {
-                    "card_number": None,
-                    "balance": 0,
-                    "debt": 0
-                },
-                "any_ploan": {
-                    "ploan_number": None,
-                    "balance": 0,
-                    "debt": 0
-                },
-                "mortgage": {
-                    "mortgage_number": None,
-                    "balance": 0,
-                    "debt": 0
-                },
-                "vehicle_loan": {
-                    "vloan_number": None,
-                    "balance": 0,
-                    "debt": 0
-                }
-            }
         }
         
 #Save everything in the Json file

@@ -32,6 +32,7 @@ def deposit():
 #Someone else.
                 elif option == 2:
                     other_acc()
+#Return to main menu.
                 elif option == 3:
                     return
                 else:
@@ -64,7 +65,7 @@ def my_products(client, cc):
         except(ValueError, KeyboardInterrupt) as sixth:
             print(f"Error: {sixth}, elige una opción válida...")
 
-#Option 1: Deposit to savings account.
+#Option 1: SB 1: Deposit to savings account.
 def deposit_ca(client, cc):
             os.system('cls' if os.name == 'nt' else 'clear')
             amount = float(input("Monto a depositar en Cuenta de Ahorros: "))
@@ -81,7 +82,7 @@ def deposit_ca(client, cc):
             print(f"Depósito exitoso en su cuenta ({accounts['savings_account']}). \nNuevo saldo de Ahorros: {client['debit_accounts']['balance']['savings_account']}")
             input("Presione Enter para continuar...")
                       
-#Option 1: Deposit to checking account.
+#Option 1: SB 2: Deposit to checking account.
 def deposit_cc(client, cc):
     os.system('cls' if os.name == 'nt' else 'clear')
     amount = float(input("Monto a depositar en Cuenta Corriente: "))

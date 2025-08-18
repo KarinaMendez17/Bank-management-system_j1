@@ -21,28 +21,26 @@
                 "balance": {
                     "savings_account": 225259.0,
                     "checking_account": 126000.5
+                }
+            },
+            "loans": {
+                "credit_card": {
+                    "card_number": "187751",
+                    "balance": 1756297.5,
+                    "limit": 1756297.5,
+                    "debt": 0,
+                    "creation_date": "2025-08-18",
+                    "expiration_date": "2033-08-18",
+                    "payment_day": 13
                 },
-                "loans": {
-                    "credit_card": {
-                        "card_number": null,
-                        "balance": 0,
-                        "debt": 0
-                    },
-                    "any_ploan": {
-                        "ploan_number": null,
-                        "balance": 0,
-                        "debt": 0
-                    },
-                    "mortgage": {
-                        "mortgage_number": null,
-                        "balance": 0,
-                        "debt": 0
-                    },
-                    "vehicle_loan": {
-                        "vloan_number": null,
-                        "balance": 0,
-                        "debt": 0
-                    }
+                "any_ploan": {
+                    "ploan_number": "332",
+                    "balance": 1053778.5,
+                    "limit": 1053778.5,
+                    "debt": 0,
+                    "creation_date": "2025-08-18",
+                    "expiration_date": "2027-08-18",
+                    "payment_day": 15
                 }
             }
         },
@@ -65,30 +63,46 @@
                 "savings_account": 3014,
                 "checking_account": 23750,
                 "balance": {
-                    "savings_account": 456109.0,
-                    "checking_account": 109000.0
+                    "savings_account": 2500000.0,
+                    "checking_account": 3500000.0
                 }
             },
             "loans": {
                 "credit_card": {
-                    "card_number": null,
-                    "balance": 0,
-                    "debt": 0
+                    "card_number": "864297",
+                    "balance": 2825545.0,
+                    "limit": 2825545.0,
+                    "debt": 0,
+                    "creation_date": "2025-08-18",
+                    "expiration_date": "2033-08-18",
+                    "payment_day": 13
                 },
                 "any_ploan": {
-                    "ploan_number": null,
-                    "balance": 0,
-                    "debt": 0
+                    "ploan_number": "573",
+                    "balance": 1695327.0,
+                    "limit": 1695327.0,
+                    "debt": 0,
+                    "creation_date": "2025-08-18",
+                    "expiration_date": "2027-08-18",
+                    "payment_day": 15
                 },
                 "mortgage": {
-                    "mortgage_number": null,
-                    "balance": 0,
-                    "debt": 0
+                    "mortgage_number": "8044365",
+                    "balance": 120000000.0,
+                    "limit": 120000000.0,
+                    "debt": 0,
+                    "creation_date": "2025-08-18",
+                    "expiration_date": "2055-08-18",
+                    "payment_day": 30
                 },
                 "vehicle_loan": {
-                    "vloan_number": null,
-                    "balance": 0,
-                    "debt": 0
+                    "vloan_number": "98779917",
+                    "balance": 60000000.0,
+                    "limit": 60000000.0,
+                    "debt": 0,
+                    "creation_date": "2025-08-18",
+                    "expiration_date": "2035-08-18",
+                    "payment_day": 20
                 }
             }
         },
@@ -96,45 +110,23 @@
             "name": "Ted",
             "age": 25,
             "gender": "M",
-            "email": "ted@aaaa.com",
+            "email": "ted@ihnmaims.com",
             "contact_info": {
-                "mobile": 7445857485,
-                "landline": 7441548474
+                "mobile": 7444145484,
+                "landline": 7444123262
             },
             "location": {
                 "country": "Mexico",
-                "department": "Guerrero",
-                "city": "Marquelia",
-                "address": "Si 145"
+                "department": "Gro",
+                "city": "Aca",
+                "address": "Calle Falsa Aaaa 123"
             },
             "debit_accounts": {
-                "savings_account": null,
+                "savings_account": 7305,
                 "checking_account": null,
                 "balance": {
                     "savings_account": 0,
                     "checking_account": 0
-                }
-            },
-            "loans": {
-                "credit_card": {
-                    "card_number": null,
-                    "balance": 0,
-                    "debt": 0
-                },
-                "any_ploan": {
-                    "ploan_number": null,
-                    "balance": 0,
-                    "debt": 0
-                },
-                "mortgage": {
-                    "mortgage_number": null,
-                    "balance": 0,
-                    "debt": 0
-                },
-                "vehicle_loan": {
-                    "vloan_number": null,
-                    "balance": 0,
-                    "debt": 0
                 }
             }
         }

@@ -1,5 +1,6 @@
 import json
 import time
+import os
 from modules.utilities import numb_criteria
 from modules.utilities import greetings
 
@@ -19,8 +20,9 @@ def deposit():
             print(f"Error: {sixth}, elige una opción válida...")
 
         while True:
+            os.system('cls' if os.name == 'nt' else 'clear')
             try:
-                print(f"===Depósitos.=== \n{greetings(client['gender'])} {client['name']}!")
+                print(f"===DEPÓSITOS.=== \n{greetings(client['gender'])} {client['name']}!")
                 print("1. Mis Cuentas.\n2. Depositar a otra cuenta. \n3. Salir.")
                 option = int(input("Elige a quién deseas depositar: "))
 
@@ -33,7 +35,7 @@ def deposit():
                 elif option == 3:
                     return
                 else:
-                    print("Opción inválida...")
+                    print("Por favor, elige una opción válida...")
                     time.sleep(1)
                     continue
             except(ValueError, KeyboardInterrupt) as sixth:
@@ -42,6 +44,7 @@ def deposit():
 #Option 1:
 def my_products(client, cc):
     while True:
+        os.system('cls' if os.name == 'nt' else 'clear')
         try:
             print("===Mis Cuentas===")
             accounts = client["debit_accounts"]
@@ -57,13 +60,16 @@ def my_products(client, cc):
                     return
                 else:
                     print("Opción inválida, intenta de nuevo.")
+                    time.sleep(1)
         except(ValueError, KeyboardInterrupt) as sixth:
             print(f"Error: {sixth}, elige una opción válida...")
 
 #Option 1: Deposit to savings account.
 def deposit_ca(client, cc):
+            os.system('cls' if os.name == 'nt' else 'clear')
             amount = float(input("Monto a depositar en Cuenta de Ahorros: "))
             client["debit_accounts"]["balance"]["savings_account"] += amount
+            accounts = client["debit_accounts"]
 
 #Save new balance in Json.
             with open("data/clients.json", "r") as am:
@@ -72,12 +78,15 @@ def deposit_ca(client, cc):
             with open("data/clients.json", "w") as am:
                 json.dump(info, am, indent=4)
 
-            print(f"Depósito exitoso. Nuevo saldo de Ahorros: {client['debit_accounts']['balance']['savings_account']}")
+            print(f"Depósito exitoso en su cuenta ({accounts['savings_account']}). \nNuevo saldo de Ahorros: {client['debit_accounts']['balance']['savings_account']}")
+            input("Presione Enter para continuar...")
                       
 #Option 1: Deposit to checking account.
 def deposit_cc(client, cc):
+    os.system('cls' if os.name == 'nt' else 'clear')
     amount = float(input("Monto a depositar en Cuenta Corriente: "))
     client["debit_accounts"]["balance"]["checking_account"] += amount
+    accounts = client["debit_accounts"]
 
 #Save new balance in Json.
     with open("data/clients.json", "r") as am:
@@ -86,10 +95,12 @@ def deposit_cc(client, cc):
     with open("data/clients.json", "w") as am:
         json.dump(info, am, indent=4)
 
-    print(f"Depósito exitoso. Nuevo saldo de Cuenta Corriente: {client['debit_accounts']['balance']['checking_account']}")
+    print(f"Depósito exitoso en su cuenta ({accounts['checking_account']}). \nNuevo saldo de Cuenta Corriente: {client['debit_accounts']['balance']['checking_account']}")
+    input("Presione Enter para continuar...")
 
 #Option 2:
 def other_acc():
+    os.system('cls' if os.name == 'nt' else 'clear')
     while True:
         try:
             with open("data/clients.json", "r") as am:
@@ -130,9 +141,8 @@ def other_acc():
             with open("data/clients.json", "w") as am:
                 json.dump(info, am, indent=4)
 
-            print(f"Depósito exitoso. Nuevo saldo de {account_names[acc_type]}: {found_client['debit_accounts']['balance'][acc_type]}")
-            choice = input("¿Desea realizar otra operación? (s/n): ").strip().lower()
-            if choice != "s":
-                break
+            print(f"Depósito exitoso por la cantidad de: ${amount} a la cuenta de {found_client['name']} con terminación {str(acc_number)[-2:]}")
+            input("Presione Enter para continuar...")
+            return
         except(ValueError, KeyboardInterrupt) as sixth:
             print(f"Error: {sixth}, elige una opción válida...")

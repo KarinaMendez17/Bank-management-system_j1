@@ -11,23 +11,33 @@ def main():
     while True:
         os.system('cls' if os.name == 'nt' else 'clear')
         try:
-            print("""===SISTEMA DE GESTIÓN BANCARIO=== \n1. Crear cuenta. \n2. Depósitos. \n3. Solicitar Crédito. \n4. Retirar efectivo. \n5. Pago cuota de crédito. \n6. Cancelar cuenta. \n7. Salir.""")
+            print("===SISTEMA DE GESTIÓN BANCARIO=== \n1. Crear cuenta. \n2. Información de la cuenta. \n3. Depósitos. \n4. Solicitar Crédito. \n5. Retirar efectivo. \n6. Pago cuota de crédito. \n7. Cancelar cuenta. \n8. Salir.")
             option = int(input("Selecciona una opción: "))
 
             match option:
                 case 1:
+                    os.system('cls' if os.name == 'nt' else 'clear')
                     da.create_debitAcc()
                 case 2:
-                    dp.deposit()
+                    os.system('cls' if os.name == 'nt' else 'clear')
+                    
                 case 3:
-                    ca.create_creditAcc()
+                    os.system('cls' if os.name == 'nt' else 'clear')
+                    dp.deposit()
                 case 4:
-                    wd.withdrawal()
+                    os.system('cls' if os.name == 'nt' else 'clear')
+                    ca.create_creditAcc()
                 case 5:
-                    pm.payments()
+                    os.system('cls' if os.name == 'nt' else 'clear')
+                    wd.withdrawal()
                 case 6:
-                    dt.terminate_account()
+                    os.system('cls' if os.name == 'nt' else 'clear')
+                    pm.payments()
                 case 7:
+                    os.system('cls' if os.name == 'nt' else 'clear')
+                    dt.terminate_account()
+                case 8:
+                    os.system('cls' if os.name == 'nt' else 'clear')
                     print("Hasta pronto...")
                     break
                 case _:

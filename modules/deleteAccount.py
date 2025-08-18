@@ -19,7 +19,7 @@ def terminate_account():
             accounts = client["debit_accounts"]
             balances = accounts.get("balance", {})
 
-            print("===Eliminar Cuenta.=== \n1. Cuenta de Ahorros. \n2. Cuenta Corriente \n3. Tarjeta de Crédito. \n4. Préstamo de Libre Inversión. \n5. Crédito Hipotecario. \n6. Crédito Automotriz. \n7. Salir.")
+            print("===ELIMINAR CUENTA.=== \n1. Cuenta de Ahorros. \n2. Cuenta Corriente \n3. Tarjeta de Crédito. \n4. Préstamo de Libre Inversión. \n5. Crédito Hipotecario. \n6. Crédito Automotriz. \n7. Salir.")
             option = int(input("Elige el tipo de cuenta a eliminar: "))
 
             if option == 1:

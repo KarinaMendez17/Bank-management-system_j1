@@ -19,8 +19,8 @@
                 "savings_account": 1234,
                 "checking_account": 87061,
                 "balance": {
-                    "savings_account": 10259.0,
-                    "checking_account": 26000.5
+                    "savings_account": 225259.0,
+                    "checking_account": 126000.5
                 },
                 "loans": {
                     "credit_card": {
@@ -65,7 +65,7 @@
                 "savings_account": 3014,
                 "checking_account": 23750,
                 "balance": {
-                    "savings_account": 11109.0,
+                    "savings_account": 456109.0,
                     "checking_account": 109000.0
                 }
             },

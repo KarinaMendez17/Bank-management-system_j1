@@ -198,7 +198,7 @@ def dt_mortgage(client, cc):
     print("Crédito Hipotecario eliminado con éxito.")
     input("Presione Enter para continuar...")
 
-#Vehicle loan
+#Vehicle loan.
 def dt_cLoan(client, cc):
     os.system('cls' if os.name == 'nt' else 'clear')
     loans = client.get("loans", {})

@@ -89,4 +89,4 @@ bank-management-simulator/
 - Not connected to any real banking system.
 
 ## Author
-Méndez Domínguez Dulce Karina
+Méndez Domínguez Dulce Karina.

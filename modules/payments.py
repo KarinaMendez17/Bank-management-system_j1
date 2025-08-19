@@ -88,7 +88,7 @@ def pay_credit(client, cc, credit_type, credit_name):
                 print("Por favor, elige una opción válida...")
                 continue
             
-            # Elegir cuenta de débito
+#Choose account
             print("\nSeleccione la cuenta desde la que desea pagar:")
             print(f"1. Cuenta de Ahorros - Saldo: ${balance.get('savings_account', 0)}")
             print(f"2. Cuenta Corriente - Saldo: ${balance.get('checking_account', 0)}")
@@ -104,11 +104,11 @@ def pay_credit(client, cc, credit_type, credit_name):
                 input("Presione Enter para continuar...")
                 continue
 
-            # Aplicar pago
+#Apply payment
             balance[acc_type] -= amount
             credit["debt"] -= amount
             
-            # Guardar cambios
+#Save changes
             debit_accounts["balance"] = balance
             client["debit_accounts"] = debit_accounts
             loans[credit_type] = credit

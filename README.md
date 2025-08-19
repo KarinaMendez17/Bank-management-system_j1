@@ -67,20 +67,21 @@ python main.py
 
 ## Project Structure
 
+```text
 bank-management-simulator/
 │
 ├─ data/
-│  └─ clients.json          # Client & account database
+│ └─ clients.json # Client & account database
 │
 ├─ modules/
-│  └─ utilities.py          # Helper functions (validation, greetings)
+│ └─ utilities.py # Helper functions (validation, greetings)
 │
-├─ deposit.py               # Deposit functionality
-├─ withdrawal.py            # Withdrawals functionality
-├─ payments.py              # Payment functionality
-├─ terminate_account.py     # Account termination functionality
-└─ main.py                  # Entry point
-
+├─ deposit.py # Deposit functionality
+├─ withdrawal.py # Withdrawals functionality
+├─ payments.py # Payment functionality
+├─ terminate_account.py # Account termination functionality
+└─ main.py # Entry point
+```
 ## Notes
 
 - This is a simulation for educational purposes.

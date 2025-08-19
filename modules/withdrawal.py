@@ -62,7 +62,7 @@ def w_loan(client, info, cc, account_type, min_amount=0, max_amount=0):
             else:
                 os.system('cls' if os.name == 'nt' else 'clear')
                 print("Seleccione destino: \n1. Cuenta de Ahorros. \n2. Cuenta Corriente. \n3. Retiro en efectivo.")
-                dest = input("Elige una opción: ")
+                dest = int(input("Elige una opción: "))
 
                 if dest == "1":
                     os.system('cls' if os.name == 'nt' else 'clear')
@@ -177,7 +177,6 @@ def w_loan(client, info, cc, account_type, min_amount=0, max_amount=0):
             with open("data/clients.json", "w") as am:
                 json.dump(info, am, indent=4)
             return
-
         except(ValueError, KeyboardInterrupt) as sixth:
             print(f"Error: {sixth}, elige una opción válida...")
 

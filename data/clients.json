@@ -19,8 +19,8 @@
                 "savings_account": 1234,
                 "checking_account": 87061,
                 "balance": {
-                    "savings_account": 335259.0,
-                    "checking_account": 216000.5
+                    "savings_account": 206259.0,
+                    "checking_account": 215000.5
                 }
             },
             "loans": {
@@ -28,7 +28,7 @@
                     "card_number": "187751",
                     "balance": 1756297.5,
                     "limit": 1756297.5,
-                    "debt": 130000,
+                    "debt": 0,
                     "creation_date": "2025-08-18",
                     "expiration_date": "2033-08-18",
                     "payment_day": 13
@@ -61,7 +61,7 @@
             },
             "debit_accounts": {
                 "balance": {
-                    "savings_account": 100000.0,
+                    "savings_account": 84000.0,
                     "checking_account": 10000000.0
                 },
                 "savings_account": 8911,
@@ -72,7 +72,7 @@
                     "card_number": "864297",
                     "balance": 2805545.0,
                     "limit": 2825545.0,
-                    "debt": 20000,
+                    "debt": 19000,
                     "creation_date": "2025-08-18",
                     "expiration_date": "2033-08-18",
                     "payment_day": 13
@@ -81,7 +81,7 @@
                     "ploan_number": "573",
                     "balance": 1495327.0,
                     "limit": 1695327.0,
-                    "debt": 200000,
+                    "debt": 185000.0,
                     "creation_date": "2025-08-18",
                     "expiration_date": "2027-08-18",
                     "payment_day": 15

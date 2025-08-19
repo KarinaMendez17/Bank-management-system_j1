@@ -67,26 +67,32 @@ def my_products(client, cc):
 
 #Option 1: SB 1: Deposit to savings account.
 def deposit_ca(client, cc):
-            os.system('cls' if os.name == 'nt' else 'clear')
-            amount = float(input("Monto a depositar en Cuenta de Ahorros: "))
-            client["debit_accounts"]["balance"]["savings_account"] += amount
-            accounts = client["debit_accounts"]
+    os.system('cls' if os.name == 'nt' else 'clear')
+    amount = float(input("Monto a depositar en Cuenta de Ahorros: "))
+    if "balance" not in client["debit_accounts"]:
+        client["debit_accounts"]["balance"] = {}
+    client["debit_accounts"]["balance"]["savings_account"] = \
+        client["debit_accounts"]["balance"].get("savings_account", 0) + amount
+    accounts = client["debit_accounts"]
 
 #Save new balance in Json.
-            with open("data/clients.json", "r") as am:
-                info = json.load(am)
-            info["clients"][str(cc)] = client
-            with open("data/clients.json", "w") as am:
-                json.dump(info, am, indent=4)
+    with open("data/clients.json", "r") as am:
+        info = json.load(am)
+    info["clients"][str(cc)] = client
+    with open("data/clients.json", "w") as am:
+        json.dump(info, am, indent=4)
 
-            print(f"Depósito exitoso en su cuenta ({accounts['savings_account']}). \nNuevo saldo de Ahorros: {client['debit_accounts']['balance']['savings_account']}")
-            input("Presione Enter para continuar...")
-                      
+    print(f"Depósito exitoso en su cuenta ({accounts['savings_account']}). \nNuevo saldo de Ahorros: {client['debit_accounts']['balance']['savings_account']}")
+    input("Presione Enter para continuar...")
+                
 #Option 1: SB 2: Deposit to checking account.
 def deposit_cc(client, cc):
     os.system('cls' if os.name == 'nt' else 'clear')
     amount = float(input("Monto a depositar en Cuenta Corriente: "))
-    client["debit_accounts"]["balance"]["checking_account"] += amount
+    if "balance" not in client["debit_accounts"]:
+        client["debit_accounts"]["balance"] = {}
+    client["debit_accounts"]["balance"]["checking_account"] = \
+        client["debit_accounts"]["balance"].get("checking_account", 0) + amount
     accounts = client["debit_accounts"]
 
 #Save new balance in Json.

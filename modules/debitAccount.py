@@ -43,8 +43,10 @@ def create_ca():
 #To avoid filling the form once again if the user is already registered.
     if str(cc) in info["clients"]:
         client = info["clients"][str(cc)]
+        if "debit_accounts" not in client:
+            client["debit_accounts"] = {}
         new_acc = "savings"
-        if client["debit_accounts"][new_acc + "_account"] is not None:
+        if client["debit_accounts"].get(new_acc + "_account") is not None:
             print("Ya tiene una cuenta de ahorros.")
             input("Presione Enter para continuar...")
             return
@@ -134,8 +136,11 @@ def create_cc():
 #To avoid duplicated accounts.
     if str(cc) in info["clients"]:
         client = info["clients"][str(cc)]
+        if "debit_accounts" not in client:
+            client["debit_accounts"] = {}
+
         new_acc = "checking"
-        if client["debit_accounts"][new_acc + "_account"] is not None:
+        if client["debit_accounts"].get(new_acc + "_account") is not None:
             print("Ya tiene una cuenta corriente.")
             input("Presione Enter para continuar...")
             return

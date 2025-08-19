@@ -43,7 +43,7 @@ def main():
                     break
                 case _:
                     print("Por favor, ingrese una opción válida...")
-                    time.sleep(2)
+                    time.sleep(1)
                     continue
         except (ValueError, KeyboardInterrupt):
             print("Ingrese un número válido...")

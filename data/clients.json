@@ -26,7 +26,7 @@
             "loans": {
                 "credit_card": {
                     "card_number": "187751",
-                    "balance": 1616297.5,
+                    "balance": 1756297.5,
                     "limit": 1756297.5,
                     "debt": 130000,
                     "creation_date": "2025-08-18",
@@ -60,12 +60,12 @@
                 "address": "Ihnmaims 109"
             },
             "debit_accounts": {
-                "savings_account": 3014,
-                "checking_account": 23750,
                 "balance": {
-                    "savings_account": 2700000.0,
-                    "checking_account": 3500000.0
-                }
+                    "savings_account": 100000.0,
+                    "checking_account": 10000000.0
+                },
+                "savings_account": 8911,
+                "checking_account": 96842
             },
             "loans": {
                 "credit_card": {
@@ -122,12 +122,7 @@
                 "address": "Calle Falsa Aaaa 123"
             },
             "debit_accounts": {
-                "savings_account": 7305,
-                "checking_account": null,
-                "balance": {
-                    "savings_account": 0,
-                    "checking_account": 0
-                }
+                "balance": {}
             }
         }
     }

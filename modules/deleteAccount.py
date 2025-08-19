@@ -1,5 +1,6 @@
 import json
 from modules.utilities import numb_criteria
+from modules.utilities import greetings
 
 #Terminate Account menu.
 def terminate_account():
@@ -20,7 +21,7 @@ def terminate_account():
             balances = accounts.get("balance", {})
 
             print("===ELIMINAR CUENTA.=== \n1. Cuenta de Ahorros. \n2. Cuenta Corriente \n3. Tarjeta de Crédito. \n4. Préstamo de Libre Inversión. \n5. Crédito Hipotecario. \n6. Crédito Automotriz. \n7. Salir.")
-            option = int(input("Elige el tipo de cuenta a eliminar: "))
+            option = int(input(f"\n{greetings(client['gender'])} {client['name']}! \nElige el tipo de cuenta a eliminar: "))
 
             if option == 1:
                 dt_cAhorros(client, cc)

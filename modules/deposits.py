@@ -7,6 +7,7 @@ from modules.utilities import greetings
 
 #One must be a client to be able to use this function.
 def deposit():
+        os.system('cls' if os.name == 'nt' else 'clear')
         try:
             with open("data/clients.json", "r") as am:
                 info = json.load(am)
@@ -22,9 +23,8 @@ def deposit():
         while True:
             os.system('cls' if os.name == 'nt' else 'clear')
             try:
-                print(f"===DEPÓSITOS.=== \n{greetings(client['gender'])} {client['name']}!")
-                print("1. Mis Cuentas.\n2. Depositar a otra cuenta. \n3. Salir.")
-                option = int(input("Elige a quién deseas depositar: "))
+                print("===DEPÓSITOS.=== \n1. Mis Cuentas.\n2. Depositar a otra cuenta. \n3. Salir.")
+                option = int(input(f"\n{greetings(client['gender'])} {client['name']}! \nElige una opción: "))
 
 #My products.
                 if option == 1:

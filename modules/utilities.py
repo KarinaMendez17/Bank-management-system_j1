@@ -37,9 +37,9 @@ def email_criteria(txt):
 def greetings(gender):
 
     if gender == "M":
-        p_greet = "bienvenido"
+        p_greet = "¡Bienvenido"
     elif gender == "F":
-        p_greet = "bienvenida"
+        p_greet = "¡Bienvenida"
     else:
-        p_greet = "bienvenidx"
+        p_greet = "¡Bienvenidx"
     return p_greet

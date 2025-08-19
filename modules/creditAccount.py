@@ -2,9 +2,7 @@ import json
 import random
 import os
 from datetime import datetime
-from datetime import timedelta
 from modules.utilities import numb_criteria
-from modules.utilities import email_criteria
 from modules.utilities import greetings
 
 def create_creditAcc():
@@ -25,8 +23,8 @@ def create_creditAcc():
         while True:
             os.system('cls' if os.name == 'nt' else 'clear')
             try:
-                print(F"===SOLICITAR CRÉDITO=== \n{greetings(client['gender'])} {client['name']}! \n1. Tarjeta de crédito. \n2. Crédito de Libre Inversión. \n3. Crédito Hipotecario. \n4. Crédito Automotriz. \n5. Salir.")
-                option = int(input("Elige una opción: "))
+                print(F"===SOLICITAR CRÉDITO=== \n1. Tarjeta de crédito. \n2. Crédito de Libre Inversión. \n3. Crédito Hipotecario. \n4. Crédito Automotriz. \n5. Salir.")
+                option = int(input(f"\n{greetings(client['gender'])} {client['name']}! \nElige una opción: "))
 
 #Credit options.
                 if option == 1: 
@@ -91,7 +89,7 @@ def tdc(client, info, cc):
             json.dump(info, am, indent=4)
 
         print(f"Tarjeta de crédito creada con número: {tdc_number}")
-        print(f"Límite aprobado: {credit_limit}")
+        print(f"Límite aprobado: ${credit_limit}")
         print(f"Fecha de creación: {today.strftime("%Y-%m-%d")}")
         print(f"Fecha de expiración: {expiration_date.strftime('%Y-%m-%d')}")
         print("Su fecha de pago es el día 13 de cada mes.")
@@ -143,7 +141,7 @@ def aploan(client, info, cc):
             json.dump(info, am, indent=4)
 
         print(f"Felicitaciones, su Préstamo de Libre Inversión fue aprobado, con el número: {apl_number}")
-        print(f"Límite aprobado: {credit_limit}")
+        print(f"Límite aprobado: ${credit_limit}")
         print(f"Fecha de creación: {today.strftime("%Y-%m-%d")}")
         print(f"Fecha de expiración: {expiration_date.strftime('%Y-%m-%d')}")
         print("Su fecha de pago es el día 15 de cada mes.")
@@ -195,7 +193,7 @@ def mortgage(client, info, cc):
             json.dump(info, am, indent=4)
 
         print(f"Felicitaciones, su Crédito Hipotecario fue aprobado, con el número: {mrtg_number}")
-        print(f"Límite aprobado: {credit_limit}")
+        print(f"Límite aprobado: ${credit_limit}")
         print(f"Fecha de creación: {today.strftime("%Y-%m-%d")}")
         print(f"Fecha de expiración: {expiration_date.strftime('%Y-%m-%d')}")
         print("Su fecha de pago es el día 30 de cada mes.")
@@ -248,7 +246,7 @@ def cloan(client, info, cc):
             json.dump(info, am, indent=4)
 
         print(f"Felicitaciones, su Crédito Automotriz fue aprobado, con el número: {vloan_number}")
-        print(f"Límite aprobado: {credit_limit}")
+        print(f"Límite aprobado: ${credit_limit}")
         print(f"Fecha de creación: {today.strftime("%Y-%m-%d")}")
         print(f"Fecha de expiración: {expiration_date.strftime('%Y-%m-%d')}")
         print("Su fecha de pago es el día 20 de cada mes.")

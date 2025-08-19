@@ -2,6 +2,7 @@
 import os
 import time
 import modules.debitAccount as da
+import modules.accountInfo as ai
 import modules.creditAccount as ca
 import modules.deposits as dp
 import modules.withdrawal as wd
@@ -20,7 +21,7 @@ def main():
                     da.create_debitAcc()
                 case 2:
                     os.system('cls' if os.name == 'nt' else 'clear')
-                    
+                    ai.account_info()
                 case 3:
                     os.system('cls' if os.name == 'nt' else 'clear')
                     dp.deposit()

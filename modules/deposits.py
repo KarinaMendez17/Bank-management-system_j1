@@ -70,9 +70,8 @@ def deposit_ca(client, cc):
     os.system('cls' if os.name == 'nt' else 'clear')
     amount = float(input("Monto a depositar en Cuenta de Ahorros: "))
     if "balance" not in client["debit_accounts"]:
-        client["debit_accounts"]["balance"] = {}
-    client["debit_accounts"]["balance"]["savings_account"] = \
-        client["debit_accounts"]["balance"].get("savings_account", 0) + amount
+        client["debit_accounts"]["balance"]["savings_account"] = 0
+    client["debit_accounts"]["balance"]["savings_account"] += amount
     accounts = client["debit_accounts"]
 
 #Save new balance in Json.
@@ -90,9 +89,9 @@ def deposit_cc(client, cc):
     os.system('cls' if os.name == 'nt' else 'clear')
     amount = float(input("Monto a depositar en Cuenta Corriente: "))
     if "balance" not in client["debit_accounts"]:
-        client["debit_accounts"]["balance"] = {}
-    client["debit_accounts"]["balance"]["checking_account"] = \
-        client["debit_accounts"]["balance"].get("checking_account", 0) + amount
+        client["debit_accounts"]["balance"]["checking_account"] = 0
+    client["debit_accounts"]["balance"]["checking_account"] += amount
+    
     accounts = client["debit_accounts"]
 
 #Save new balance in Json.

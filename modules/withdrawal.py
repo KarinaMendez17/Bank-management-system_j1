@@ -64,7 +64,7 @@ def w_loan(client, info, cc, account_type, min_amount=0, max_amount=0):
                 print("Seleccione destino: \n1. Cuenta de Ahorros. \n2. Cuenta Corriente. \n3. Retiro en efectivo.")
                 dest = int(input("Elige una opción: "))
 
-                if dest == "1":
+                if dest == 1:
                     os.system('cls' if os.name == 'nt' else 'clear')
                     savings_balance = client.get("debit_accounts", {}).get("balance", {}).get("savings_account")
                     if not savings_balance:
@@ -100,7 +100,7 @@ def w_loan(client, info, cc, account_type, min_amount=0, max_amount=0):
                             client["loans"][account_type]["debt"] = client["loans"][account_type].get("debt", 0) + amount
                             print(f"Transferencia exitosa por: ${amount}. \nNuevo balance de crédito: ${client['loans'][account_type]['balance']}")
                             input("Presione Enter para continuar...")
-                elif dest == "2":
+                elif dest == 2:
                     os.system('cls' if os.name == 'nt' else 'clear')
                     checking_balance = client.get("debit_accounts", {}).get("balance", {}).get("checking_account")
                     if not checking_balance:
@@ -137,7 +137,7 @@ def w_loan(client, info, cc, account_type, min_amount=0, max_amount=0):
                             print(f"Transferencia exitosa por: ${amount}. \nNuevo balance de crédito: ${client['loans'][account_type]['balance']}")
                             input("Presione Enter para continuar...")
 
-                elif dest == "3":
+                elif dest == 3:
                     os.system('cls' if os.name == 'nt' else 'clear')
                     amount = int(input("Ingrese el monto a retirar: "))
 
